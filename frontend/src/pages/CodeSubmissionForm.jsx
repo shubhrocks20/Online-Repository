@@ -44,7 +44,7 @@ const CodeSubmissionForm = () => {
       setExecutionResult(response.data.output || '');
       setExecutionError(response.data.error || '');
     } catch (error) {
-      setExecutionError(error.message);
+      setExecutionError(response.error.message);
     }
   };
 
