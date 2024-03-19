@@ -44,7 +44,8 @@ const CodeSubmissionForm = () => {
       setExecutionResult(response.data.output || '');
       setExecutionError(response.data.error || '');
     } catch (error) {
-      setExecutionError(response.error.message);
+      
+      setExecutionError(error.response.data.error.message);
     }
   };
 
@@ -106,7 +107,7 @@ const CodeSubmissionForm = () => {
       {executionError && (
         <div className="mt-4 p-4 bg-red-100 border-l-4 border-red-500 text-red-700">
           <p>Error:</p>
-          <pre>{'Something Wrong in the Code!'}</pre>
+          <pre>{executionError}</pre>
         </div>
       )}
     </div>
