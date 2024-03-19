@@ -1,5 +1,6 @@
 import axios from 'axios'
-process.loadEnvFile();
+import dotenv from 'dotenv'
+dotenv.config()
 const judge0 = axios.create({
     baseURL: process.env.BASE_URL, // Replace with the actual base URL
     headers: {

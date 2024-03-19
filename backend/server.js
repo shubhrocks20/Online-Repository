@@ -1,6 +1,7 @@
 import express from 'express'
 import router from './routes/code.route.js';
-process.loadEnvFile();
+import dotenv from 'dotenv'
+dotenv.config()
 import redis from 'redis'
 
 import cors from 'cors';
