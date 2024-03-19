@@ -40,7 +40,7 @@ const CodeSubmissionForm = () => {
     setExecutionResult('');
     setExecutionError('');
     try {
-      const response = await axios.post('http://localhost:4000/api/page1', formData);
+      const response = await axios.post('https://online-repository.onrender.com/api/page1', formData);
       setExecutionResult(response.data.output || '');
       setExecutionError(response.data.error || '');
     } catch (error) {

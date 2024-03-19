@@ -9,7 +9,7 @@ const GetSubmissions = () => {
   useEffect(() => {
     const fetchSubmissions = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/page2');
+        const response = await axios.get('https://online-repository.onrender.com/api/page2');
         setSubmissions(response.data);
       } catch (error) {
         console.error('Error fetching submissions:', error);
